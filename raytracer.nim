@@ -187,9 +187,10 @@ if len(params) != 1:
 else:
     let command = params[0]
 
-    if command == "colorswatch":
-        color_swatch()
-    elif command == "bluesky":
-        blue_sky()
-    else:
-        echo usage
+    case command:
+        of "colorswatch":
+            color_swatch()
+        of "bluesky":
+            blue_sky()
+        else:
+            echo usage
